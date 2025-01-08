@@ -1,28 +1,28 @@
-function generatePassword(passwordLength, IncludeLowerCase, IncludeUpperCase, IncludeNumbers, IncludeSymbols) {
-    const LowerCase = 'abcdefghijklmnopqrstuvwxyz';
-    const UpperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const Numbers = '0123456789';
-    const Symbols = '!@#$%^&*()_+';
+function generatePassword(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols) {
+    const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+    const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numbers = '0123456789';
+    const symbols = '!@#$%^&*()_+';
 
     let allowedChars = '';
     let password = '';
 
     // Add characters based on selected options
-    allowedChars += IncludeLowerCase ? LowerCase : '';
-    allowedChars += IncludeUpperCase ? UpperCase : '';
-    allowedChars += IncludeNumbers ? Numbers : '';
-    allowedChars += IncludeSymbols ? Symbols : '';
+    if (includeLowerCase) allowedChars += lowerCase;
+    if (includeUpperCase) allowedChars += upperCase;
+    if (includeNumbers) allowedChars += numbers;
+    if (includeSymbols) allowedChars += symbols;
 
     // Check if password length is valid
     if (passwordLength <= 0) {
-        alert("The password should at least be 1 character long");
-        return ''; // Return empty if invalid length
+        alert("The password should be at least 1 character long.");
+        return '';
     }
 
     // Check if at least one character set is selected
     if (allowedChars.length === 0) {
-        alert("At least 1 set of characters should be selected");
-        return ''; // Return empty if no character sets are selected
+        alert("At least one character set should be selected.");
+        return '';
     }
 
     // Generate password by picking random characters from allowedChars
@@ -31,19 +31,24 @@ function generatePassword(passwordLength, IncludeLowerCase, IncludeUpperCase, In
         password += allowedChars[randomIndex];
     }
 
-    return password; // Return the generated password
+    return password;
 }
 
 function generateAndDisplayPassword() {
     // Get the values from the HTML elements
     const passwordLength = parseInt(document.getElementById("leem").value, 10);
-    const IncludeLowerCase = document.getElementById("IncludeLowercase").checked;
-    const IncludeUpperCase = document.getElementById("IncludeUppercase").checked;
-    const IncludeSymbols = document.getElementById("IncludeSymbols").checked;
-    const IncludeNumbers = document.getElementById("IncludeNumbers").checked;
+    if (isNaN(passwordLength)) {
+        alert("Please enter a valid password length.");
+        return;
+    }
+
+    const includeLowerCase = document.getElementById("IncludeLowercase").checked;
+    const includeUpperCase = document.getElementById("IncludeUppercase").checked;
+    const includeSymbols = document.getElementById("IncludeSymbols").checked;
+    const includeNumbers = document.getElementById("IncludeNumbers").checked;
 
     // Call the function to generate a password
-    const password = generatePassword(passwordLength, IncludeLowerCase, IncludeUpperCase, IncludeSymbols, IncludeNumbers);
+    const password = generatePassword(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols);
 
     // Display the password in the container
     const myContainer = document.getElementById("myContainer");
