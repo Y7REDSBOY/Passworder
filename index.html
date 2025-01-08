@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" charset="UTF-8">
+        <title>Yousef Alsanea</title>
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <body>
+       
+        <div id="hellodiv">
+            <h1>Password Generator</h1>
+            <div id="mydiv">
+                <input type="text" id="myContainer" readonly>
+                <button onclick="generateAndDisplayPassword()" id="Myfunction">🔍</button>
+            </div>
+                <div class="row">
+                    <label for="leem"><p>Length of Password</p></label>
+                    <br>
+                    <input type="number" id="leem">
+                    <br>
+                </div>
+                <div class="row">
+                    <label for="IncludeNumbers"><p>Include Numbers</p></label>
+                    <input type="checkbox" id="IncludeNumbers">
+                    <br>
+                </div>
+                <div class="row">
+                    <label for="IncludeLowercase"><p>Include lowercase</p></label>
+                    <input type="checkbox" id="IncludeLowercase">
+                    <br>
+                </div>
+                <div class="row">
+                    <label for="IncludeUppercase"><p>Include Uppercase</p></label>
+                    <input type="checkbox" id="IncludeUppercase">
+                    <br>
+                </div>
+                <div class="row">
+                    <label for="IncludeSymbols"><p>Include Symbols</p></label>
+                    <input type="checkbox" id="IncludeSymbols">
+                    <br>
+                </div>
+
+        </div>
+
+        <script src="yo.js"></script>
+        
+    </body>
+</html>

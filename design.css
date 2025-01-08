@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(to right, purple, red, yellow);
+    display: flex; /* Enables flexbox on the body */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Makes the body take up the full viewport height */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#hellodiv{
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    border: 3px white solid;
+    border-radius: 20px;
+}
+
+h1{
+    margin-top: 30px;
+    padding: 10px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+}
+
+#mydiv{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+#myContainer{
+    width: 600px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+#Myfunction{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.row{
+    display: flex;
+    margin-block: 8px;
+}
+
+.row p, .row label{
+    flex-basis: 90%;
+    font-size: 18px;
+}
+
+.row input [type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+#leem{
+    width: 50px;
+    margin-right: 20px;
+}
+
+p{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+}
+
+#Myfunction:hover{
+    background-color: white;
+    border-radius: 40px;
+}
