@@ -39,8 +39,8 @@ function generateAndDisplayPassword() {
     const passwordLength = parseInt(document.getElementById("leem").value, 10);
     const IncludeLowerCase = document.getElementById("IncludeLowercase").checked;
     const IncludeUpperCase = document.getElementById("IncludeUppercase").checked;
-    const IncludeSymbols = document.getElementById("IncludeSymbols").checked;
     const IncludeNumbers = document.getElementById("IncludeNumbers").checked;
+    const IncludeSymbols = document.getElementById("IncludeSymbols").checked;
 
     // Call the function to generate a password
     const password = generatePassword(passwordLength, IncludeLowerCase, IncludeUpperCase, IncludeSymbols, IncludeNumbers);
